@@ -276,6 +276,9 @@
 												if ( $.isFunction(this.onreadystatechange) ) {
 													this.onreadystatechange( m.isTimeout ? 'timeout' : undefined );
 												}
+												if ($.isFunction(m.onMockjaxCompleted)) {
+													m.onMockjaxCompleted();
+												}
 											}).apply(that);
 										};
 									})(this);
